@@ -10,7 +10,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
-const SentryCliPlugin = require("@sentry/webpack-plugin")
+// const SentryCliPlugin = require("@sentry/webpack-plugin")
 
 const env = require('../config/prod.env')
 
@@ -119,13 +119,13 @@ const webpackConfig = merge(baseWebpackConfig, {
       }
     ]),
     // 给sentry加上sourcemap
-    new SentryCliPlugin({
-      urlPrefix: 'https://assets.dxycdn.com/gitrepo/e-elect/dist/',
-      include: './dist/',
-      ignore: ['node_modules', 'config/*'],
-      release: config.build.RELEASE,
-      configFile: '../.sentryclirc'
-    })
+    // new SentryCliPlugin({
+    //   urlPrefix: 'https://assets.dxycdn.com/gitrepo/e-elect/dist/',
+    //   include: './dist/',
+    //   ignore: ['node_modules', 'config/*'],
+    //   release: config.build.RELEASE,
+    //   configFile: '../.sentryclirc'
+    // })
   ]
 })
 

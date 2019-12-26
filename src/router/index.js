@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/views/home'
+import Index from '@/views/index'
+import Result from '@/views/result'
 
 Vue.use(Router)
 
@@ -9,12 +10,17 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/home'
+      redirect: '/index'
     },
     {
-      path: '/home',
-      name: 'Home',
-      component: Home
+      path: '/index',
+      name: 'Index',
+      component: Index
+    },
+    {
+      path: '/result',
+      name: 'Result',
+      component: Result
     }
   ]
 })
